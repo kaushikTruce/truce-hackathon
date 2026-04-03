@@ -31,7 +31,7 @@ def mooreAlgo(nums):
     for num in nums:
         if count == 0:
             ele = num
-            count += 1
+            count = 1
         elif num == ele:
             count += 1
         else:
