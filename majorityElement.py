@@ -25,6 +25,29 @@ def func(nums):
             return item
     return None
 
-nums = [7, 0, 0, 1, 7, 7, 2, 7, 7]
+# Using Moore's Voting Algorithm
+def mooreAlgo(nums):
+    ele, count = None, 0
+    for num in nums:
+        if count == 0:
+            ele = num
+            count += 1
+        elif num == ele:
+            count += 1
+        else:
+            count -= 1
+    
+    # check for majority
+    freq = 0
+    for num in nums:
+        if num == ele:
+            freq += 1
+    
+    if freq > len(nums) // 2:
+        return ele
+    return None
+
+nums = [3, 3, 1, 2, 0, 3, 3]
 print(majorityEle(nums))
 print(func(nums))
+print(mooreAlgo(nums))
