@@ -25,7 +25,7 @@ def func(nums):
             return item
     return None
 
-# Using Moore's Voting Algorithm
+# Using Moore's Voting Algorithm: - TC: O(n) and SC: O(1)
 def mooreAlgo(nums):
     ele, count = None, 0
     for num in nums:
